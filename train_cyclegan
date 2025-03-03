@@ -1,7 +1,7 @@
 #!/bin/bash # The interpreter used to execute the script
 
 # Lines beginning with #SBATCH specify your computing resources and other logistics about how to run your job.
-#SBATCH --account=mdst
+#SBATCH --account=mdatascience_team
 #SBATCH --time=12:00
 #SBATCH --partition=gpu
 #SBATCH --gpus=1
@@ -13,4 +13,4 @@
 
 module load python/3.11.5
 
-python3 train --dataroot datasets/vangogh2photo/ --cuda
+python3 train.py --dataroot datasets/vangogh2photo/ --cuda
